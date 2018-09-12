@@ -626,7 +626,7 @@
 			}
 		},
 		{
-			"target_name": "bindings",
+			"target_name": "<(module_name)",
 			"dependencies": [
 				"usvfs_x64"
 			],
@@ -701,6 +701,21 @@
 					"msvs_windows_target_platform_version": "10.0.16299.0"
 				}
 			}
-		}
+		},
+		{
+			"target_name": "action_after_build",
+			"type": "none",
+			"dependencies": [ "<(module_name)" ],
+			"copies": [
+				{
+				"files": [
+					"<(PRODUCT_DIR)/<(module_name).node",
+					"<(PRODUCT_DIR)/usvfs_x64.dll",
+					"<(PRODUCT_DIR)/usvfs_x64.lib"
+				],
+				"destination": "<(module_path)"
+				}
+			]
+		},
 	]
 }
