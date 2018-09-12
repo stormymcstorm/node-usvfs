@@ -159,7 +159,7 @@
     <ClCompile Include="..\deps\usvfs\asmjit\src\asmjit\x86\x86inst.cpp"/>
     <ClCompile Include="..\deps\usvfs\asmjit\src\asmjit\x86\x86operand.cpp"/>
     <ClCompile Include="..\deps\usvfs\asmjit\src\asmjit\x86\x86operand_regs.cpp"/>
-    <ClCompile Include="C:\Program Files\nodejs\node_modules\npm\node_modules\node-gyp\src\win_delay_load_hook.cc"/>
+    <ClCompile Include="C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\node_modules\node-gyp\src\win_delay_load_hook.cc"/>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
   <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>

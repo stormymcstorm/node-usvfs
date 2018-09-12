@@ -152,7 +152,7 @@
     <ClCompile Include="..\deps\usvfs\src\shared\wildcard.cpp"/>
     <ClCompile Include="..\deps\usvfs\src\shared\winapi.cpp"/>
     <ClCompile Include="..\deps\usvfs\src\shared\windows_error.cpp"/>
-    <ClCompile Include="C:\Program Files\nodejs\node_modules\npm\node_modules\node-gyp\src\win_delay_load_hook.cc"/>
+    <ClCompile Include="C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\node_modules\node-gyp\src\win_delay_load_hook.cc"/>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
   <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>
