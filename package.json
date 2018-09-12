@@ -6,9 +6,9 @@
   "main": "bindings.js",
   "files": [
     "bindings.js",
-    "build/Release/bindings.node",
-    "build/Release/usvfs_x64.dll",
-    "build/Release/usvfs_proxy.exe"
+    "lib/binding/Release/bindings.node",
+    "lib/binding/build/Release/usvfs_x64.dll",
+    "lib/binding/build/Release/usvfs_proxy.exe"
   ],
   "engines": {
     "node": ">=8.0.0"
@@ -38,7 +38,7 @@
     "module_name": "node-usvfs",
     "module_path": "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
     "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
-    "host": "https://github.com/stormymcstorm/node-usvfs/releases/download/",
+    "host": "https://github.com/jordanbtucker/node-usvfs/releases/download/",
     "remote_path": "v{version}"
   },
   "dependencies": {
