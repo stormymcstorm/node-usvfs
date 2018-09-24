@@ -17,12 +17,12 @@ class USVFS : public Napi::ObjectWrap<USVFS> {
 	private:
 		static Napi::FunctionReference constructor;
 
-		Napi::Value ClearMappings(const Napi::CallbackInfo& info);
-		Napi::Value LinkFile(const Napi::CallbackInfo& info);
-		Napi::Value LinkDirectoryStatic(const Napi::CallbackInfo& info);
-		Napi::Value Disconnect(const Napi::CallbackInfo& info);
-		Napi::Value SpawnSync(const Napi::CallbackInfo& info);
-		Napi::Value Spawn(const Napi::CallbackInfo& info);
+		Napi::Value clearMappings(const Napi::CallbackInfo& info);
+		Napi::Value linkFile(const Napi::CallbackInfo& info);
+		Napi::Value linkDirectoryStatic(const Napi::CallbackInfo& info);
+		Napi::Value disconnect(const Napi::CallbackInfo& info);
+		Napi::Value spawnSync(const Napi::CallbackInfo& info);
+		Napi::Value spawn(const Napi::CallbackInfo& info);
 
 		USVFSParameters params_;
 };

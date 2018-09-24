@@ -7,7 +7,7 @@
                 "${workspaceFolder}/node_modules/node-addon-api",
 								"${workspaceFolder}/node_modules/node-addon-api/src",
 								"${workspaceFolder}/node_modules/napi-thread-safe-callback",
-								"${workspaceFolder}/src/cpp"
+								"${workspaceFolder}/src"
             ],
             "defines": [
                 "_DEBUG",

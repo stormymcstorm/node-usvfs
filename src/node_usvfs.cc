@@ -82,12 +82,12 @@ Napi::Object USVFS::Init(Napi::Env env, Napi::Object exports) {
 	Napi::HandleScope scope(env);
 
 	Napi::Function func = DefineClass(env, "USVFS", {
-		InstanceMethod("ClearMappings", &USVFS::ClearMappings),
-		InstanceMethod("LinkFile", &USVFS::LinkFile),
-		InstanceMethod("LinkDirectoryStatic", &USVFS::LinkDirectoryStatic),
-		InstanceMethod("SpawnSync", &USVFS::SpawnSync),
-		InstanceMethod("Spawn", &USVFS::Spawn),
-		InstanceMethod("Disconnect", &USVFS::Disconnect),
+		InstanceMethod("ClearMappings", &USVFS::clearMappings),
+		InstanceMethod("LinkFile", &USVFS::linkFile),
+		InstanceMethod("LinkDirectoryStatic", &USVFS::linkDirectoryStatic),
+		InstanceMethod("SpawnSync", &USVFS::spawnSync),
+		InstanceMethod("Spawn", &USVFS::spawn),
+		InstanceMethod("Disconnect", &USVFS::disconnect),
 	});
 
 	constructor = Napi::Persistent(func);
@@ -222,13 +222,13 @@ USVFS::USVFS(const Napi::CallbackInfo& info) : Napi::ObjectWrap<USVFS>(info) {
 		Napi::Error::New(env, "Failed to create new VFS").ThrowAsJavaScriptException();
 }
 
-Napi::Value USVFS::ClearMappings(const Napi::CallbackInfo& info) {
+Napi::Value USVFS::clearMappings(const Napi::CallbackInfo& info) {
 	ClearVirtualMappings();
 
 	return info.This();
 }
 
-Napi::Value USVFS::LinkFile(const Napi::CallbackInfo& info) {
+Napi::Value USVFS::linkFile(const Napi::CallbackInfo& info) {
 	Napi::Env env = info.Env();
 	Napi::HandleScope scope(env);
 
@@ -259,7 +259,7 @@ Napi::Value USVFS::LinkFile(const Napi::CallbackInfo& info) {
 	return Napi::Boolean::New(env, worked);
 }
 
-Napi::Value USVFS::LinkDirectoryStatic(const Napi::CallbackInfo& info) {
+Napi::Value USVFS::linkDirectoryStatic(const Napi::CallbackInfo& info) {
 	Napi::Env env = info.Env();
 	Napi::HandleScope scope(env);
 
@@ -290,13 +290,13 @@ Napi::Value USVFS::LinkDirectoryStatic(const Napi::CallbackInfo& info) {
 	return Napi::Boolean::New(env, worked);
 }
 
-Napi::Value USVFS::Disconnect(const Napi::CallbackInfo& info) {
+Napi::Value USVFS::disconnect(const Napi::CallbackInfo& info) {
 	DisconnectVFS();
 
 	return info.This();
 }
 
-Napi::Value USVFS::SpawnSync(const Napi::CallbackInfo& info) {
+Napi::Value USVFS::spawnSync(const Napi::CallbackInfo& info) {
 	Napi::Env env = info.Env();
 	Napi::HandleScope scope(env);
 	SpawnOptions options;
@@ -334,7 +334,7 @@ Napi::Value USVFS::SpawnSync(const Napi::CallbackInfo& info) {
 	return Napi::Value();
 }
 
-Napi::Value USVFS::Spawn(const Napi::CallbackInfo& info) {
+Napi::Value USVFS::spawn(const Napi::CallbackInfo& info) {
 	Napi::Env env = info.Env();
 	Napi::HandleScope scope(env);
 	SpawnOptions options;
