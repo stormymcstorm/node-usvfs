@@ -30,7 +30,6 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
-build
 lib/binding
 
 # Dependency directories
@@ -65,3 +64,6 @@ typings/
 deps
 build
 lib
+
+# source
+src
