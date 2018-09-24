@@ -140,22 +140,22 @@
       <Message>Copying $(OutDir)/usvfs_x64.lib to C:/Users/storm/Workspace/src/github.com/stormymcstorm/node-usvfs/lib/binding/Release/node-v64-win32-x64\usvfs_x64.lib</Message>
       <Outputs>C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\lib\binding\Release\node-v64-win32-x64\usvfs_x64.lib</Outputs>
     </CustomBuild>
-    <CustomBuild Include="$(OutDir)\node-usvfs.node">
-      <FileType>Document</FileType>
-      <Command>call mkdir &quot;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\lib\binding\Release\node-v64-win32-x64&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(OutDir)node-usvfs.node&quot; &quot;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\lib\binding\Release\node-v64-win32-x64\node-usvfs.node&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
-      <Message>Copying $(OutDir)/node-usvfs.node to C:/Users/storm/Workspace/src/github.com/stormymcstorm/node-usvfs/lib/binding/Release/node-v64-win32-x64\node-usvfs.node</Message>
-      <Outputs>C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\lib\binding\Release\node-v64-win32-x64\node-usvfs.node</Outputs>
-    </CustomBuild>
     <CustomBuild Include="$(OutDir)\usvfs_x64.dll">
       <FileType>Document</FileType>
       <Command>call mkdir &quot;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\lib\binding\Release\node-v64-win32-x64&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(OutDir)usvfs_x64.dll&quot; &quot;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\lib\binding\Release\node-v64-win32-x64\usvfs_x64.dll&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
       <Message>Copying $(OutDir)/usvfs_x64.dll to C:/Users/storm/Workspace/src/github.com/stormymcstorm/node-usvfs/lib/binding/Release/node-v64-win32-x64\usvfs_x64.dll</Message>
       <Outputs>C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\lib\binding\Release\node-v64-win32-x64\usvfs_x64.dll</Outputs>
     </CustomBuild>
+    <CustomBuild Include="$(OutDir)\node_usvfs.node">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\lib\binding\Release\node-v64-win32-x64&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(OutDir)node_usvfs.node&quot; &quot;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\lib\binding\Release\node-v64-win32-x64\node_usvfs.node&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying $(OutDir)/node_usvfs.node to C:/Users/storm/Workspace/src/github.com/stormymcstorm/node-usvfs/lib/binding/Release/node-v64-win32-x64\node_usvfs.node</Message>
+      <Outputs>C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\lib\binding\Release\node-v64-win32-x64\node_usvfs.node</Outputs>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="node-usvfs.vcxproj">
-      <Project>{0C4F11B6-5315-B40A-5AC4-4EADB3B46397}</Project>
+    <ProjectReference Include="node_usvfs.vcxproj">
+      <Project>{DBF2A147-942A-184F-CC5F-1496F81F7AA8}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>

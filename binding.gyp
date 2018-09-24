@@ -627,8 +627,11 @@
 		},
 		{
 			"target_name": "<(module_name)",
+			# "cflags!": [ "-fno-exceptions" ],
+      # "cflags_cc!": [ "-fno-exceptions" ],
 			"dependencies": [
-				"usvfs_x64"
+				"usvfs_x64",
+				"<!(node -p \"require('node-addon-api').gyp\")"
 			],
 			"defines": [
 				"BUILDING_USVFS_DLL",
@@ -638,7 +641,9 @@
 				"NOMINMAX",
 				"_WINDOWS",
 				"NDEBUG",
-				"BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE"
+				"BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE",
+				"NAPI_CPP_EXCEPTIONS",
+				"_HAS_EXCEPTIONS=1"
 			],
 			"libraries": [
 				"Shlwapi.lib",
@@ -669,8 +674,10 @@
 				"../deps/boost/stage/lib/libboost_thread-vc141-mt-sgd-x64-1_67.lib"
 			],
 			"include_dirs": [
-				"src",
-				"<!(node -e \"require('nan')\")",
+				"<!@(node -p \"require('node-addon-api').include\")",
+				"<!@(node -p \"require('napi-thread-safe-callback').include\")",
+				"src/cpp",
+				"node_modules/node-addon-api/src",
 				"deps/usvfs/include",
 				"deps/usvfs/src/usvfs_dll",
 				"deps/usvfs/src/shared",
@@ -684,7 +691,8 @@
 				"deps/usvfs/spdlog/include/spdlog"
 			],
 			"sources": [
-				"src/bindings.cc"
+				"src/cpp/node_usvfs.cc",
+				"src/cpp/bindings.cc"
 			],
 			"configurations": {
 				"Release": {

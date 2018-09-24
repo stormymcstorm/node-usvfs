@@ -1,61 +1,54 @@
 {
-  "name": "node-usvfs",
-  "version": "1.0.0",
+  "name": "@stormymcstorm/node_usvfs",
+  "version": "0.0.1",
   "description": "Node.js bindings for USVFS",
-  "private": true,
-  "main": "bindings.js",
-  "files": [
-    "bindings.js",
-    "lib/binding/Release/bindings.node",
-    "lib/binding/build/Release/usvfs_x64.dll",
-    "lib/binding/build/Release/usvfs_proxy.exe"
-  ],
+  "main": "./bindings.js",
   "engines": {
     "node": ">=8.0.0"
   },
+  "os": [
+    "win32"
+  ],
+	"cpu": [
+		"x64"
+	],
   "scripts": {
     "install": "node-pre-gyp install --fallback-to-build",
-    "publish-binary": "node-pre-gyp package && node-pre-gyp-github publish",
-    "build": "node-pre-gyp build",
-    "build-boost": "cd deps/boost && bootstrap && b2 --with-date_time --with-coroutine --with-filesystem --with-thread --with-log --with-locale address-model=64 architecture=x86 link=static runtime-link=static",
-    "build-udist86-optable": "cd deps/usvfs/udis86 && python scripts/ud_itab.py docs/x86/optable.xml libudis86",
-    "coverage": "npm test && tap --coverage-report=html",
-    "dev-setup": "npm run build-boost && npm run build-udist86-optable && npm run rebuild",
-    "lint": "eslint --fix .",
-    "rebuild": "node-pre-gyp rebuild",
-    "test": "tap test -Rspec --cov"
+    "build": "node-pre-gyp rebuild",
+    "build:boost": "cd deps/boost && bootstrap && b2 --with-date_time --with-coroutine --with-filesystem --with-thread --with-log --with-locale address-model=64 architecture=x86 link=static runtime-link=static",
+    "build:udist86-optable": "cd deps/usvfs/udis86 && python scripts/ud_itab.py docs/x86/optable.xml libudis86",
+    "dev-setup": "node-pre-gyp configure && npm run build:boost && npm run build:udist86-optable && npm run rebuild"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jordanbtucker/node-usvfs.git"
+    "url": "git+https://github.com/stormymcstorm/node_usvfs.git"
   },
-  "author": "Jordan Tucker <jordanbtucker@gmail.com>",
+  "author": "Carson Storm <stormymcstorm@gmail.com>",
+  "contributors": [
+    {
+      "name": "Jordan Tucker",
+      "email": "jordanbtucker@gmail.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jordanbtucker/node-usvfs/issues"
+    "url": "https://github.com/stormymcstorm/node_usvfs/issues"
   },
-  "homepage": "https://github.com/jordanbtucker/node-usvfs#readme",
+  "homepage": "https://github.com/stormymcstorm/node_usvfs#readme",
   "binary": {
-    "module_name": "node-usvfs",
+    "module_name": "node_usvfs",
     "module_path": "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
     "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
-    "host": "https://github.com/jordanbtucker/node-usvfs/releases/download/",
+    "host": "https://github.com/stormymcstorm/node_usvfs/releases/download/",
     "remote_path": "v{version}"
   },
   "dependencies": {
-    "node-pre-gyp": "^0.11.0",
-    "node-pre-gyp-github": "^1.4.1"
+    "node-pre-gyp": "^0.11.0"
   },
   "devDependencies": {
-    "eslint": "^5.3.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "nan": "^2.10.0",
+		"napi-thread-safe-callback": "^0.0.6",
+    "node-addon-api": "^1.4.0",
     "node-gyp": "^3.8.0",
-    "sinon": "^6.1.5",
     "tap": "^12.0.1"
   }
 }

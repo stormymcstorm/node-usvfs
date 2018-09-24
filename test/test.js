@@ -10,15 +10,15 @@ tap.test('Spawns notepad', async () => {
 	// Only tests that it doesn't throw.
 
 	// Clear all directory mappings.
-	usvfs.clearMappings()
+	usvfs.ClearMappings()
 
 	// Recursively link a real directory to a virtual one.
-	usvfs.linkDirectory(
+	usvfs.LinkDirectoryStatic(
 		path.resolve(__dirname, 'fixtures/s'),
 		path.resolve(__dirname, 'fixtures/d')
 	)
 
 	// Spawn a process that will see the virtual links.
 	// Ensure that Notepad sees both `test/fixtures/s` and `test/fixtures/d`.
-	usvfs.spawn('notepad.exe')
+	usvfs.SpawnSync('notepad.exe')
 })

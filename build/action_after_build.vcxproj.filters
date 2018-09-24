@@ -54,7 +54,7 @@
     <None Include="..\binding.gyp">
       <Filter>..</Filter>
     </None>
-    <None Include="$(OutDir)\node-usvfs.node">
+    <None Include="$(OutDir)\node_usvfs.node">
       <Filter>$(OutDir)</Filter>
     </None>
     <None Include="$(OutDir)\usvfs_x64.dll">

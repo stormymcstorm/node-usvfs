@@ -1,4 +1,4 @@
-# node-usvfs
+# node_usvfs
 Node.js bindings for [User Space Virtual File System (USVFS)](https://github.com/modorganizer2/usvfs).
 
 This is currently a work in progress and is probably unstable.
@@ -74,7 +74,7 @@ editing.
 #### windows-build-tools Is Not Required
 When installing Node.js addons, you usually just install
 [windows-build-tools](https://www.npmjs.com/package/windows-build-tools).
-However, windows-build-tools installs Visual Studio 2015, and node-usvfs
+However, windows-build-tools installs Visual Studio 2015, and node_usvfs
 requires Visual Studio 2017. If you've already installed windows-build-tools,
 you don't need to uninstall it. Visual Studio 2017 and windows-build-tools can
 coexist.
@@ -85,8 +85,8 @@ These steps only need to be done once.
 Run the following commands to clone the repository and its dependencies.
 
 ```
-git clone --recurse-submodules https://github.com/jordanbtucker/node-usvfs
-cd node-usvfs
+git clone --recurse-submodules https://github.com/jordanbtucker/node_usvfs
+cd node_usvfs
 npm install --ignore-scripts
 npm run dev-setup
 ```

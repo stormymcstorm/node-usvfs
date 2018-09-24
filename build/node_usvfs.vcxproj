@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0C4F11B6-5315-B40A-5AC4-4EADB3B46397}</ProjectGuid>
+    <ProjectGuid>{DBF2A147-942A-184F-CC5F-1496F81F7AA8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>node-usvfs</RootNamespace>
+    <RootNamespace>node_usvfs</RootNamespace>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\storm\.node-gyp\10.9.0\include\node;C:\Users\storm\.node-gyp\10.9.0\src;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\config;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\openssl\include;C:\Users\storm\.node-gyp\10.9.0\deps\uv\include;C:\Users\storm\.node-gyp\10.9.0\deps\zlib;C:\Users\storm\.node-gyp\10.9.0\deps\v8\include;..\src;..\node_modules\nan;..\deps\usvfs\include;..\deps\usvfs\src\usvfs_dll;..\deps\usvfs\src\shared;..\deps\usvfs\src\thooklib;..\deps\usvfs\src\tinjectlib;..\deps\usvfs\src\usvfs_helper;..\deps\usvfs\asmjit\src\asmjit;..\deps\usvfs\udis86;..\deps\boost;..\deps\usvfs\fmt;..\deps\usvfs\spdlog\include\spdlog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\storm\.node-gyp\10.9.0\include\node;C:\Users\storm\.node-gyp\10.9.0\src;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\config;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\openssl\include;C:\Users\storm\.node-gyp\10.9.0\deps\uv\include;C:\Users\storm\.node-gyp\10.9.0\deps\zlib;C:\Users\storm\.node-gyp\10.9.0\deps\v8\include;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\node_modules\node-addon-api;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\node_modules\napi-thread-safe-callback;..\src\cpp;..\node_modules\node-addon-api\src;..\deps\usvfs\include;..\deps\usvfs\src\usvfs_dll;..\deps\usvfs\src\shared;..\deps\usvfs\src\thooklib;..\deps\usvfs\src\tinjectlib;..\deps\usvfs\src\usvfs_helper;..\deps\usvfs\asmjit\src\asmjit;..\deps\usvfs\udis86;..\deps\boost;..\deps\usvfs\fmt;..\deps\usvfs\spdlog\include\spdlog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/bigobj /MP %(AdditionalOptions)</AdditionalOptions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <BufferSecurityCheck>true</BufferSecurityCheck>
@@ -61,7 +61,7 @@
       <OmitFramePointers>false</OmitFramePointers>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=node-usvfs;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_USVFS_DLL;ASMJIT_STATIC;SPDLOG_NO_NAME;SPDLOG_NO_REGISTRY_MUTEX;NOMINMAX;_WINDOWS;NDEBUG;BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE;BUILDING_NODE_EXTENSION;DEBUG;_DEBUG;V8_ENABLE_CHECKS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=node_usvfs;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_USVFS_DLL;ASMJIT_STATIC;SPDLOG_NO_NAME;SPDLOG_NO_REGISTRY_MUTEX;NOMINMAX;_WINDOWS;NDEBUG;BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE;NAPI_CPP_EXCEPTIONS;_HAS_EXCEPTIONS=1;BUILDING_NODE_EXTENSION;DEBUG;_DEBUG;V8_ENABLE_CHECKS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <StringPooling>true</StringPooling>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -84,13 +84,13 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>C:\Users\storm\.node-gyp\10.9.0\include\node;C:\Users\storm\.node-gyp\10.9.0\src;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\config;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\openssl\include;C:\Users\storm\.node-gyp\10.9.0\deps\uv\include;C:\Users\storm\.node-gyp\10.9.0\deps\zlib;C:\Users\storm\.node-gyp\10.9.0\deps\v8\include;..\src;..\node_modules\nan;..\deps\usvfs\include;..\deps\usvfs\src\usvfs_dll;..\deps\usvfs\src\shared;..\deps\usvfs\src\thooklib;..\deps\usvfs\src\tinjectlib;..\deps\usvfs\src\usvfs_helper;..\deps\usvfs\asmjit\src\asmjit;..\deps\usvfs\udis86;..\deps\boost;..\deps\usvfs\fmt;..\deps\usvfs\spdlog\include\spdlog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=node-usvfs;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_USVFS_DLL;ASMJIT_STATIC;SPDLOG_NO_NAME;SPDLOG_NO_REGISTRY_MUTEX;NOMINMAX;_WINDOWS;NDEBUG;BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE;BUILDING_NODE_EXTENSION;DEBUG;_DEBUG;V8_ENABLE_CHECKS;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\storm\.node-gyp\10.9.0\include\node;C:\Users\storm\.node-gyp\10.9.0\src;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\config;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\openssl\include;C:\Users\storm\.node-gyp\10.9.0\deps\uv\include;C:\Users\storm\.node-gyp\10.9.0\deps\zlib;C:\Users\storm\.node-gyp\10.9.0\deps\v8\include;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\node_modules\node-addon-api;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\node_modules\napi-thread-safe-callback;..\src\cpp;..\node_modules\node-addon-api\src;..\deps\usvfs\include;..\deps\usvfs\src\usvfs_dll;..\deps\usvfs\src\shared;..\deps\usvfs\src\thooklib;..\deps\usvfs\src\tinjectlib;..\deps\usvfs\src\usvfs_helper;..\deps\usvfs\asmjit\src\asmjit;..\deps\usvfs\udis86;..\deps\boost;..\deps\usvfs\fmt;..\deps\usvfs\spdlog\include\spdlog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=node_usvfs;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_USVFS_DLL;ASMJIT_STATIC;SPDLOG_NO_NAME;SPDLOG_NO_REGISTRY_MUTEX;NOMINMAX;_WINDOWS;NDEBUG;BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE;NAPI_CPP_EXCEPTIONS;_HAS_EXCEPTIONS=1;BUILDING_NODE_EXTENSION;DEBUG;_DEBUG;V8_ENABLE_CHECKS;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\storm\.node-gyp\10.9.0\include\node;C:\Users\storm\.node-gyp\10.9.0\src;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\config;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\openssl\include;C:\Users\storm\.node-gyp\10.9.0\deps\uv\include;C:\Users\storm\.node-gyp\10.9.0\deps\zlib;C:\Users\storm\.node-gyp\10.9.0\deps\v8\include;..\src;..\node_modules\nan;..\deps\usvfs\include;..\deps\usvfs\src\usvfs_dll;..\deps\usvfs\src\shared;..\deps\usvfs\src\thooklib;..\deps\usvfs\src\tinjectlib;..\deps\usvfs\src\usvfs_helper;..\deps\usvfs\asmjit\src\asmjit;..\deps\usvfs\udis86;..\deps\boost;..\deps\usvfs\fmt;..\deps\usvfs\spdlog\include\spdlog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\storm\.node-gyp\10.9.0\include\node;C:\Users\storm\.node-gyp\10.9.0\src;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\config;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\openssl\include;C:\Users\storm\.node-gyp\10.9.0\deps\uv\include;C:\Users\storm\.node-gyp\10.9.0\deps\zlib;C:\Users\storm\.node-gyp\10.9.0\deps\v8\include;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\node_modules\node-addon-api;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\node_modules\napi-thread-safe-callback;..\src\cpp;..\node_modules\node-addon-api\src;..\deps\usvfs\include;..\deps\usvfs\src\usvfs_dll;..\deps\usvfs\src\shared;..\deps\usvfs\src\thooklib;..\deps\usvfs\src\tinjectlib;..\deps\usvfs\src\usvfs_helper;..\deps\usvfs\asmjit\src\asmjit;..\deps\usvfs\udis86;..\deps\boost;..\deps\usvfs\fmt;..\deps\usvfs\spdlog\include\spdlog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <CompileAsWinRT>false</CompileAsWinRT>
@@ -104,7 +104,7 @@
       <OmitFramePointers>true</OmitFramePointers>
       <Optimization>Full</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=node-usvfs;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_USVFS_DLL;ASMJIT_STATIC;SPDLOG_NO_NAME;SPDLOG_NO_REGISTRY_MUTEX;NOMINMAX;_WINDOWS;NDEBUG;BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE;BUILDING_NODE_EXTENSION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=node_usvfs;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_USVFS_DLL;ASMJIT_STATIC;SPDLOG_NO_NAME;SPDLOG_NO_REGISTRY_MUTEX;NOMINMAX;_WINDOWS;NDEBUG;BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE;NAPI_CPP_EXCEPTIONS;_HAS_EXCEPTIONS=1;BUILDING_NODE_EXTENSION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <StringPooling>true</StringPooling>
@@ -134,20 +134,25 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>C:\Users\storm\.node-gyp\10.9.0\include\node;C:\Users\storm\.node-gyp\10.9.0\src;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\config;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\openssl\include;C:\Users\storm\.node-gyp\10.9.0\deps\uv\include;C:\Users\storm\.node-gyp\10.9.0\deps\zlib;C:\Users\storm\.node-gyp\10.9.0\deps\v8\include;..\src;..\node_modules\nan;..\deps\usvfs\include;..\deps\usvfs\src\usvfs_dll;..\deps\usvfs\src\shared;..\deps\usvfs\src\thooklib;..\deps\usvfs\src\tinjectlib;..\deps\usvfs\src\usvfs_helper;..\deps\usvfs\asmjit\src\asmjit;..\deps\usvfs\udis86;..\deps\boost;..\deps\usvfs\fmt;..\deps\usvfs\spdlog\include\spdlog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=node-usvfs;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_USVFS_DLL;ASMJIT_STATIC;SPDLOG_NO_NAME;SPDLOG_NO_REGISTRY_MUTEX;NOMINMAX;_WINDOWS;NDEBUG;BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE;BUILDING_NODE_EXTENSION;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\storm\.node-gyp\10.9.0\include\node;C:\Users\storm\.node-gyp\10.9.0\src;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\config;C:\Users\storm\.node-gyp\10.9.0\deps\openssl\openssl\include;C:\Users\storm\.node-gyp\10.9.0\deps\uv\include;C:\Users\storm\.node-gyp\10.9.0\deps\zlib;C:\Users\storm\.node-gyp\10.9.0\deps\v8\include;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\node_modules\node-addon-api;C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\node_modules\napi-thread-safe-callback;..\src\cpp;..\node_modules\node-addon-api\src;..\deps\usvfs\include;..\deps\usvfs\src\usvfs_dll;..\deps\usvfs\src\shared;..\deps\usvfs\src\thooklib;..\deps\usvfs\src\tinjectlib;..\deps\usvfs\src\usvfs_helper;..\deps\usvfs\asmjit\src\asmjit;..\deps\usvfs\udis86;..\deps\boost;..\deps\usvfs\fmt;..\deps\usvfs\spdlog\include\spdlog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=node_usvfs;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_USVFS_DLL;ASMJIT_STATIC;SPDLOG_NO_NAME;SPDLOG_NO_REGISTRY_MUTEX;NOMINMAX;_WINDOWS;NDEBUG;BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE;NAPI_CPP_EXCEPTIONS;_HAS_EXCEPTIONS=1;BUILDING_NODE_EXTENSION;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="..\binding.gyp"/>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\bindings.cc"/>
+    <ClCompile Include="..\src\cpp\node_usvfs.cc"/>
+    <ClCompile Include="..\src\cpp\bindings.cc"/>
     <ClCompile Include="C:\Users\storm\Workspace\src\github.com\stormymcstorm\node-usvfs\node_modules\node-gyp\src\win_delay_load_hook.cc"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="usvfs_x64.vcxproj">
       <Project>{AB2D032B-12F5-5B52-5E8B-724D435F1312}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\node_modules\node-addon-api\src\nothing.vcxproj">
+      <Project>{DB698873-3E7A-1342-2957-16A7EF61C4DE}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
