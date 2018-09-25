@@ -1,6 +1,6 @@
 {
   "name": "@stormymcstorm/node_usvfs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node.js bindings for USVFS",
   "main": "./bindings.js",
   "engines": {
@@ -13,11 +13,8 @@
 		"x64"
 	],
   "scripts": {
-    "install": "node-pre-gyp install",
-    "build": "node-pre-gyp rebuild",
-    "build:boost": "cd deps/boost && bootstrap && b2 --with-date_time --with-coroutine --with-filesystem --with-thread --with-log --with-locale address-model=64 architecture=x86 link=static runtime-link=static",
-    "build:udist86-optable": "cd deps/usvfs/udis86 && python scripts/ud_itab.py docs/x86/optable.xml libudis86",
-    "dev-setup": "node-pre-gyp configure && npm run build:boost && npm run build:udist86-optable && npm run rebuild"
+    "install": "node-pre-gyp install --fallback-to-build",
+    "build": "node-pre-gyp rebuild"
   },
   "repository": {
     "type": "git",
