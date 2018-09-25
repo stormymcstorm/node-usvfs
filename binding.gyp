@@ -27,8 +27,8 @@
 				{
 				"files": [
 					"<(PRODUCT_DIR)/<(module_name).node",
-					"<(PRODUCT_DIR)/usvfs_x64.dll",
-					"<(PRODUCT_DIR)/usvfs_x64.lib"
+					"<(PRODUCT_DIR)/usvfs.dll",
+					"<(PRODUCT_DIR)/usvfs.lib"
 				],
 				"destination": "<(module_path)"
 				}

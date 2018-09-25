@@ -2,19 +2,21 @@
   "name": "@stormymcstorm/node_usvfs",
   "version": "0.0.2",
   "description": "Node.js bindings for USVFS",
-  "main": "./bindings.js",
+  "main": "./lib/node_usvfs.js",
   "engines": {
     "node": ">=8.0.0"
   },
   "os": [
     "win32"
   ],
-	"cpu": [
-		"x64"
-	],
+  "cpu": [
+    "x64"
+  ],
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build",
-    "build": "node-pre-gyp rebuild"
+		"install": "node-pre-gyp install --fallback-to-build",
+		"build": "npm run build:cpp && npm run build:js",
+		"build:cpp": "node-pre-gyp rebuild",
+		"build:js": "microbundle -i src/js/index.js -f cjs --target node"
   },
   "repository": {
     "type": "git",
@@ -40,11 +42,12 @@
     "remote_path": "v{version}"
   },
   "dependencies": {
-		"node-pre-gyp": "^0.11.0",
-		"napi-thread-safe-callback": "^0.0.6",
-    "node-addon-api": "^1.4.0"
+    "napi-thread-safe-callback": "^0.0.6",
+    "node-addon-api": "^1.4.0",
+    "node-pre-gyp": "^0.11.0"
   },
   "devDependencies": {
+    "microbundle": "^0.6.0",
     "node-gyp": "^3.8.0",
     "tap": "^12.0.1"
   }
