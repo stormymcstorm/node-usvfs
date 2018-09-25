@@ -1,5 +1,5 @@
 {
-  "name": "@stormymcstorm/node_usvfs",
+  "name": "node_usvfs",
   "version": "0.0.2",
   "description": "Node.js bindings for USVFS",
   "main": "./lib/node_usvfs.js",
@@ -16,7 +16,8 @@
 		"install": "node-pre-gyp install --fallback-to-build",
 		"build": "npm run build:cpp && npm run build:js",
 		"build:cpp": "node-pre-gyp rebuild",
-		"build:js": "microbundle -i src/js/index.js -f cjs --target node"
+		"build:js": "microbundle -i src/js/index.js -f cjs --target node",
+		"package-binary": "npm run build:cpp && node-pre-gyp package"
   },
   "repository": {
     "type": "git",

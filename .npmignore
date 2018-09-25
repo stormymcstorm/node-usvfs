@@ -63,7 +63,7 @@ typings/
 # build dependencies
 deps
 build
-lib
+lib/binding
 
 # source
 src
