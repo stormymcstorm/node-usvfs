@@ -16,7 +16,7 @@
 			"target_name": "<(module_name)",
 			"dependencies": [
 				"build_deps",
-				"./src/binding.gyp:<(module_name)",
+				"./src/cpp/module.gyp:<(module_name)",
 			],
 		},
 		{
