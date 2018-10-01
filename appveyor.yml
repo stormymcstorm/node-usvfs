@@ -11,6 +11,10 @@ environment:
     - nodejs_version: 6
     - nodejs_version: 10
 
+cache:
+  - deps/usvfs -> .gitmodules
+  - node_modules -> package.json
+
 install:
   - ps: Install-Product node $env:nodejs_version $env:Platform
   - IF /I "%PLATFORM%" == "x64" set BOOST_LIB="C:\\Libraries\\boost_1_67_0\\lib64-msvc-14.1"
