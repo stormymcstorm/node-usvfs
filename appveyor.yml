@@ -12,15 +12,15 @@ platform:
   - x64
 
 install:
-	- ps: Intstall-Product node $env:nodejs_version $env: Platform
-	- npm config get
-	- node -v
-	- npm -v
-	- node -e "console.log(process.arch);"
-	- npm install
+  - ps: Intstall-Product node $env:nodejs_version $env: Platform
+  - npm config get
+  - node -v
+  - npm -v
+  - node -e "console.log(process.arch);"
+  - npm install
 
 build:
-	- npm run build
+  - npm run build
 
 test: off
 
