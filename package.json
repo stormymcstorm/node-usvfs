@@ -6,12 +6,8 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "os": [
-    "win32"
-  ],
-  "cpu": [
-    "x64"
-  ],
+  "os": ["win32"],
+  "cpu": ["x64","ia32"],
   "scripts": {
 		"install": "node-pre-gyp install --fallback-to-build",
 		"build": "npm run build:cpp && npm run build:js",
