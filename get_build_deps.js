@@ -43,7 +43,6 @@ isBoostReady(boostLib)
 	.then(usvfsIsCloned => {
 		if (! usvfsIsCloned) {
 			console.log('Cloning deps/usvfs');
-			return spawnCommand("git", "")
 			return spawnCommand("git", ["submodule", "update", "deps/usvfs", "--recursive"], {
 				cwd: __dirname,
 				stdio: 'inherit',
