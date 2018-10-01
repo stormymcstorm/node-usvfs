@@ -43,10 +43,7 @@ isBoostReady(boostLib)
 	.then(usvfsIsCloned => {
 		if (! usvfsIsCloned) {
 			console.log('Cloning deps/usvfs');
-			return spawnCommand("git", ["submodule", "update", "deps/usvfs", "--recursive"], {
-				cwd: __dirname,
-				stdio: 'inherit',
-			});
+			return clone('deps/usvfs')
 		}
 	})
 	.then(() => {
@@ -87,10 +84,7 @@ function buildLocalBoost() {
 		.then(boostIsCloned => {
 			if (! boostIsCloned) {
 				console.log('Cloning deps/boost');
-				return spawnCommand("git", ["submodule", "update", "deps/boost", "--recursive"], {
-					cwd: __dirname,
-					stdio: 'inherit',
-				});
+				return clone('deps/boost');
 			}
 		})
 		.then(() => {
@@ -110,6 +104,13 @@ function buildLocalBoost() {
 					"runtime-link=static"
 				], {cwd: boostPath, stdio: 'inherit'}));
 		});
+}
+
+function clone(modulePath) {
+	return spawnCommand("git", ["submodule", "update", "--init", "--recursive", "--", modulePath], {
+		cwd: __dirname,
+		stdio: 'inherit',
+	});
 }
 
 function isBoostReady(lib) {
