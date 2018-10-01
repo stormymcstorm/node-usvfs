@@ -190,11 +190,11 @@ function allExist(files) {
 			else reject(err);
 		}
 		else resolve(true);
-	}).then(found => {
+	})).then(found => {
 		if (found) console.log('\tfound ' + file);
 		else console.log('\tnot found ' + file);
 		return found;
-	})));
+	}));
 
 	return Promise.all(proms).then(results => results.every(exists => exists));
 }
