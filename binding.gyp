@@ -1,4 +1,17 @@
 {
+	"variables": {
+		"boost_dir": "<!(node -p \"process.env.BOOST_LIB || '../../../deps/boost/stage/lib'\")",
+
+		"conditions": [
+			["target_arch=='x64'", {
+				"arch": "x64",
+			}],
+			["target_arch=='ia32'", {
+				"arch": "x32",
+			}],
+		],
+	},
+
 	"targets": [
 		{
 			"target_name": "build_deps",
@@ -7,7 +20,7 @@
 					"action_name": "get_build_deps",
 					"inputs": [],
 					"outputs": [""],
-					"action": ["node", "./get_build_deps.js"],
+					"action": ["node", "./get_build_deps.js", "--arch=<(arch)"],
 					"message": "Getting build dependencies"
 				}
 			],

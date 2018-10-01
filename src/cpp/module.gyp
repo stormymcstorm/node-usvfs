@@ -1,4 +1,17 @@
 {
+	"variables": {
+		"boost_dir": "<!(node -p \"process.env.BOOST_LIB || '../../../deps/boost/stage/lib'\")",
+
+		"conditions": [
+			["target_arch=='x64'", {
+				"arch": "x64",
+			}],
+			["target_arch=='ia32'", {
+				"arch": "x32",
+			}],
+		],
+	},
+
 	"targets": [
 		{
 			"target_name": "<(module_name)",
@@ -20,67 +33,33 @@
 				"NAPI_CPP_EXCEPTIONS",
 				"_HAS_EXCEPTIONS=1"
 			],
-			"conditions": [
-				["target_arch=='x64'", {
-					"libraries": [
-						"Shlwapi.lib",
-						"Version.lib",
-						"../../../deps/boost/stage/lib/libboost_atomic-vc141-mt-s-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_atomic-vc141-mt-sgd-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_chrono-vc141-mt-s-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_chrono-vc141-mt-sgd-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_context-vc141-mt-s-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_context-vc141-mt-sgd-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_coroutine-vc141-mt-s-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_coroutine-vc141-mt-sgd-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_date_time-vc141-mt-s-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_date_time-vc141-mt-sgd-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_filesystem-vc141-mt-s-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_filesystem-vc141-mt-sgd-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_locale-vc141-mt-s-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_locale-vc141-mt-sgd-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_log-vc141-mt-s-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_log-vc141-mt-sgd-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_log_setup-vc141-mt-s-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_log_setup-vc141-mt-sgd-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_regex-vc141-mt-s-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_regex-vc141-mt-sgd-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_system-vc141-mt-s-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_system-vc141-mt-sgd-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_thread-vc141-mt-s-x64-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_thread-vc141-mt-sgd-x64-1_67.lib"
-					],
-				}],
-				["target_arch=='ia32'", {
-					"libraries": [
-						"Shlwapi.lib",
-						"Version.lib",
-						"../../../deps/boost/stage/lib/libboost_atomic-vc141-mt-s-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_atomic-vc141-mt-sgd-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_chrono-vc141-mt-s-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_chrono-vc141-mt-sgd-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_context-vc141-mt-s-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_context-vc141-mt-sgd-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_coroutine-vc141-mt-s-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_coroutine-vc141-mt-sgd-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_date_time-vc141-mt-s-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_date_time-vc141-mt-sgd-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_filesystem-vc141-mt-s-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_filesystem-vc141-mt-sgd-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_locale-vc141-mt-s-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_locale-vc141-mt-sgd-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_log-vc141-mt-s-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_log-vc141-mt-sgd-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_log_setup-vc141-mt-s-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_log_setup-vc141-mt-sgd-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_regex-vc141-mt-s-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_regex-vc141-mt-sgd-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_system-vc141-mt-s-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_system-vc141-mt-sgd-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_thread-vc141-mt-s-x32-1_67.lib",
-						"../../../deps/boost/stage/lib/libboost_thread-vc141-mt-sgd-x32-1_67.lib"
-					],
-				}],
+			"libraries": [
+				"Shlwapi.lib",
+				"Version.lib",
+				"<(boost_dir)/libboost_atomic-vc141-mt-s-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_atomic-vc141-mt-sgd-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_chrono-vc141-mt-s-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_chrono-vc141-mt-sgd-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_context-vc141-mt-s-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_context-vc141-mt-sgd-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_coroutine-vc141-mt-s-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_coroutine-vc141-mt-sgd-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_date_time-vc141-mt-s-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_date_time-vc141-mt-sgd-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_filesystem-vc141-mt-s-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_filesystem-vc141-mt-sgd-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_locale-vc141-mt-s-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_locale-vc141-mt-sgd-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_log-vc141-mt-s-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_log-vc141-mt-sgd-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_log_setup-vc141-mt-s-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_log_setup-vc141-mt-sgd-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_regex-vc141-mt-s-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_regex-vc141-mt-sgd-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_system-vc141-mt-s-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_system-vc141-mt-sgd-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_thread-vc141-mt-s-<(arch)-1_67.lib",
+				"<(boost_dir)/libboost_thread-vc141-mt-sgd-<(arch)-1_67.lib"
 			],
 			"include_dirs": [
 				"<!@(node -p \"require('node-addon-api').include\")",
