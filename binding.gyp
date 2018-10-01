@@ -20,7 +20,7 @@
 					"action_name": "get_build_deps",
 					"inputs": [],
 					"outputs": [""],
-					"action": ["node", "./get_build_deps.js", "--arch=<(arch)"],
+					"action": ["node", "./get_build_deps.js"],
 					"message": "Getting build dependencies"
 				}
 			],

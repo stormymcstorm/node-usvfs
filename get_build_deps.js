@@ -33,7 +33,10 @@ const boostLib = process.env.BOOST_LIB || boostBackupLib;
 console.log(`Checking if boost is ready to use at ${boostLib}`);
 isBoostReady(boostLib)
 	.then(isReady => {
-		if (! isReady) return buildLocalBoost();
+		if (! isReady) {
+			console.log(`Did not find boost libraries for x${boostLibArch}`);
+			return buildLocalBoost();
+		}
 	})
 	.then(() => {
 		console.log('boost is ready');
