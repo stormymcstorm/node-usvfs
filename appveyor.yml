@@ -16,6 +16,7 @@ cache:
   - node_modules -> package.json
 
 install:
+  - ps: ls C:\Libraries\boost_1_67_0
   - ps: Install-Product node $env:nodejs_version $env:Platform
   - IF /I "%PLATFORM%" == "x64" set BOOST_LIB="C:\\Libraries\\boost_1_67_0\\lib64-msvc-14.1"
   - IF /I "%PLATFORM%" == "x64" set PATH=C:\Python27-x64;%PATH%
