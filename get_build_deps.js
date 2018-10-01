@@ -191,7 +191,8 @@ function allExist(files) {
 		}
 		else resolve(true);
 	}).then(found => {
-		console.log('\tfound ' + file);
+		if (found) console.log('\tfound ' + file);
+		else console.log('\tnot found ' + file);
 		return found;
 	})));
 
