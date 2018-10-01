@@ -17,8 +17,8 @@ install:
   - node -v
   - npm -v
   - node -e "console.log(process.arch);"
-	- npm install
-	- npm run build
+  - npm install
+  - npm run build
 
 build: off
 test: off
