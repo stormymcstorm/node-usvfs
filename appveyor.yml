@@ -2,12 +2,10 @@ version: 0.0.2
 
 image: Visual Studio 2017
 
-enviroment:
-	matrix:
-		- node_version: "10"
-		- node_version: "9"
-		- node_version: "8"
-		- node_version: "6"
+environment:
+  matrix:
+    - nodejs_version: 6
+    - nodejs_version: 10
 
 platform:
 	- x86
