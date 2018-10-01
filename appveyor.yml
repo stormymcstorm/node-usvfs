@@ -12,7 +12,7 @@ platform:
   - x64
 
 install:
-  - ps: Intstall-Product node $env:nodejs_version $env:Platform
+  - ps: Install-Product node $env:nodejs_version $env:Platform
   - npm config get
   - node -v
   - npm -v
