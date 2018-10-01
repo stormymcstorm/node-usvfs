@@ -45,7 +45,8 @@ allExist([usvfsPath, boostPath])
 	.then(udisIsBuilt => {
 		if (! udisIsBuilt) {
 			console.log('Building udis86');
-			return spawnCommand("python", ["scripts/ud_itab.py", "docs/x86/optable.xml", "libudis86"], {
+
+			return spawnCommand(path.resolve(process.env.USERPROFILE, '.windows-build-tools', 'python27', 'python'), ["scripts/ud_itab.py", "docs/x86/optable.xml", "libudis86"], {
 				cwd: path.resolve(usvfsPath, 'udis86'),
 				stdio: 'inherit',
 			});
@@ -60,7 +61,7 @@ function spawnCommand(...args) {
 
 		p.once('close', code => {
 			p.removeAllListeners();
-			if (code != 0) reject(new Error("'git submodule update --init --recursive' exited with a non-zero code"));
+			if (code != 0) reject(new Error(`'${args.join(' ')}' exited with a non-zero code`));
 			else resolve();
 		});
 
