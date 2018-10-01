@@ -1,0 +1,28 @@
+version: 0.0.2
+
+image: Visual Studio 2017
+
+enviroment:
+	matrix:
+		- node_version: "10"
+		- node_version: "9"
+		- node_version: "8"
+		- node_version: "6"
+
+platform:
+	- x86
+	- x64
+
+install:
+	- ps: Intstall-Product node $env:nodejs_version $env: Platform
+	- npm config get
+	- node -v
+	- npm -v
+	- node -e "console.log(process.arch);"
+	- npm install
+
+build:
+	- npm run build
+
+test: off
+
