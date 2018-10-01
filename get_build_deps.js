@@ -18,7 +18,10 @@ allExist([usvfsPath, boostPath])
 	.then(areCloned => {
 		if (! areCloned) {
 			console.log("Clonning submodules");
-			return spawnCommand("git", ["submodule", "update", "--init", "--recursive"]);
+			return spawnCommand("git", ["submodule", "update", "--init", "--recursive"], {
+				cwd: __dirname,
+				stdio: 'inherit',
+			});
 		}
 		else console.log("Submodules are cloned");
 	})
