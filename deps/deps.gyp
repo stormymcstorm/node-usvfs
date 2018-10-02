@@ -129,7 +129,7 @@
 				"usvfs/asmjit/src/asmjit",
 				"usvfs/udis86",
 				"usvfs/include",
-				"<(boost_dir),
+				"<(boost_dir)",
 				"usvfs/fmt",
 				"usvfs/spdlog/include/spdlog"
 			],
