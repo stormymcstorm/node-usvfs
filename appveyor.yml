@@ -16,8 +16,12 @@ cache:
   - deps/usvfs -> .gitmodules
   - node_modules -> package.json
 
+artifacts:
+  - path: build/stage
+  - type: zip
+  - name: module
+
 install:
-  - ps: ls C:\Libraries\boost_1_67_0\lib64-msvc-14.1
   - ps: Install-Product node $env:nodejs_version $env:Platform
   - set BOOST_DIR=C:\Libraries\boost_1_67_0
   - IF /I "%PLATFORM%" == "x64" set BOOST_LIB=C:\Libraries\boost_1_67_0\lib64-msvc-14.1
@@ -29,7 +33,7 @@ install:
   - npm -v
   - node -e "console.log(process.arch);"
   - npm install
-  - npm run build
+  - npm run package-binary
 
 build: off
 test: off
