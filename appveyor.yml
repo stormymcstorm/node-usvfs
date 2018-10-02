@@ -18,8 +18,8 @@ cache:
 
 artifacts:
   - path: build/stage
-  - type: zip
-  - name: module
+    type: zip
+    name: module
 
 install:
   - ps: Install-Product node $env:nodejs_version $env:Platform
