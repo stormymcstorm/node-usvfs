@@ -8,7 +8,9 @@ platform:
 environment:
   matrix:
     - nodejs_version: 10
+    - nodejs_version: 9
     - nodejs_version: 8
+    - nodejs_version: 7
     - nodejs_version: 6
 
 
@@ -17,7 +19,7 @@ cache:
   - node_modules -> package.json
 
 artifacts:
-  - path: build/stage/*.tar.gz
+  - path: build/stage/**/*.tar.gz
 
 install:
   - ps: Install-Product node $env:nodejs_version $env:Platform
