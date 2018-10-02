@@ -64,7 +64,7 @@
 			"include_dirs": [
 				"usvfs/src/shared",
 				"usvfs/include",
-				"boost",
+				"<(boost_dir)",
 				"usvfs/fmt",
 				"usvfs/spdlog/include/spdlog"
 			],
@@ -129,7 +129,7 @@
 				"usvfs/asmjit/src/asmjit",
 				"usvfs/udis86",
 				"usvfs/include",
-				"boost",
+				"<(boost_dir),
 				"usvfs/fmt",
 				"usvfs/spdlog/include/spdlog"
 			],
@@ -182,7 +182,7 @@
 				"usvfs/asmjit/src/asmjit",
 				"usvfs/udis86",
 				"usvfs/include",
-				"boost",
+				"<(boost_dir)",
 				"usvfs/fmt",
 				"usvfs/spdlog/include/spdlog"
 			],
@@ -233,7 +233,7 @@
 				"usvfs/asmjit/src/asmjit",
 				"usvfs/udis86",
 				"usvfs/include",
-				"boost",
+				"<(boost_dir)",
 				"usvfs/fmt",
 				"usvfs/spdlog/include/spdlog"
 			],
@@ -290,7 +290,7 @@
 				"usvfs/src/usvfs_helper",
 				"usvfs/asmjit/src/asmjit",
 				"usvfs/udis86",
-				"boost",
+				"<(boost_dir)",
 				"usvfs/fmt",
 				"usvfs/spdlog/include/spdlog"
 			],
@@ -351,7 +351,7 @@
 				"usvfs/asmjit/src/asmjit",
 				"usvfs/udis86",
 				"usvfs/include",
-				"boost",
+				"<(boost_dir)",
 				"usvfs/fmt",
 				"usvfs/spdlog/include/spdlog"
 			],
