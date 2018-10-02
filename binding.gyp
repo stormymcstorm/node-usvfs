@@ -1,6 +1,6 @@
 {
 	"variables": {
-		"boost_dir": "<!(node -p \"process.env.BOOST_LIB || '../../../deps/boost/stage/lib'\")",
+		"boost_lib": "<!(node -p \"process.env.BOOST_LIB || '../../../deps/boost/stage/lib'\")",
 
 		"conditions": [
 			["target_arch=='x64'", {
